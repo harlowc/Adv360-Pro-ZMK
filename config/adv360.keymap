@@ -10,13 +10,32 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        hm: homerow_mods {
+        hmr: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8>;
         };
     };
 
@@ -26,11 +45,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1           &kp N2    &kp N3              &kp N4              &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7               &kp N8                   &kp N9    &kp N0           &kp MINUS
-&kp TAB    &kp Q            &kp W     &kp F               &kp P               &kp B   &none                                                          &none      &kp J   &kp L                &kp U                    &kp Y     &kp SEMICOLON    &kp BSLH
-&kp ESC    &hm RIGHT_ALT A  &kp R     &hm LEFT_SHIFT S    &hm LEFT_COMMAND T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hm RIGHT_COMMAND N  &hm RIGHT_SHIFT E        &kp I     &hm RIGHT_ALT O  &kp SQT
-&kp LSHFT  &kp Z            &kp X     &hm LEFT_CONTROL C  &kp D               &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                &hm RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH         &kp RSHFT
-&mo 2      &kp GRAVE        &kp CAPS  &kp LEFT            &kp RIGHT                   &kp RETURN  &kp BACKSPACE  &kp END       &kp PG_DN  &kp TAB    &kp SPACE          &kp UP               &kp DOWN                 &kp LBKT  &kp RBKT         &mo 2
+&kp EQUAL  &kp N1            &kp N2    &kp N3               &kp N4               &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7                &kp N8                    &kp N9    &kp N0            &kp MINUS
+&kp TAB    &kp Q             &kp W     &kp F                &kp P                &kp B   &none                                                          &none      &kp J   &kp L                 &kp U                     &kp Y     &kp SEMICOLON     &kp BSLH
+&kp ESC    &hml RIGHT_ALT A  &kp R     &hml LEFT_SHIFT S    &hml LEFT_COMMAND T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr RIGHT_COMMAND N  &hmr RIGHT_SHIFT E        &kp I     &hmr RIGHT_ALT O  &kp SQT
+&kp LSHFT  &kp Z             &kp X     &hml LEFT_CONTROL C  &kp D                &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                 &hmr RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH          &kp RSHFT
+&mo 2      &kp GRAVE         &kp CAPS  &kp LEFT             &kp RIGHT                    &kp RETURN  &kp BACKSPACE  &kp END       &kp PG_DN  &kp TAB    &kp SPACE          &kp UP                &kp DOWN                  &kp LBKT  &kp RBKT          &mo 2
             >;
         };
 
