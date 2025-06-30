@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
@@ -49,7 +49,7 @@
 &kp TAB    &kp Q             &kp W     &kp F                &kp P                &kp B   &none                                                          &none      &kp J   &kp L                 &kp U                     &kp Y     &kp SEMICOLON     &kp BSLH
 &kp ESC    &hml RIGHT_ALT A  &kp R     &hml LEFT_SHIFT S    &hml LEFT_COMMAND T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr RIGHT_COMMAND N  &hmr RIGHT_SHIFT E        &kp I     &hmr RIGHT_ALT O  &kp SQT
 &kp LSHFT  &kp Z             &kp X     &hml LEFT_CONTROL C  &kp D                &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                 &hmr RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH          &kp RSHFT
-&mo 2      &kp GRAVE         &kp CAPS  &kp LEFT             &kp RIGHT                    &kp RETURN  &kp BACKSPACE  &kp END       &kp PG_DN  &kp TAB    &kp SPACE          &kp UP                &kp DOWN                  &kp LBKT  &kp RBKT          &mo 2
+&mo 2      &kp GRAVE         &kp CAPS  &kp LEFT             &kp RIGHT                    &kp RETURN  &kp BACKSPACE  &mo 2         &mo 1      &kp TAB    &kp SPACE          &kp UP                &kp DOWN                  &kp LBKT  &kp RBKT          &mo 2
             >;
         };
 
