@@ -10,23 +10,23 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        hmr: homerow_mods {
+        hmr_i: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <190>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
-            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51>;
+            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51 65 66 35 36 52 67 47 61 62 63 64>;
         };
 
-        hml: hml {
+        hml_i: hml_i {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "HML_I";
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             flavor = "balanced";
@@ -35,7 +35,91 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
-            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8>;
+            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8 37 38 53 68 69 70 71 72 73 74>;
+        };
+
+        hmr_m: hmr_m {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_M";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51 65 66 35 36 52 67 47 61 62 63 64>;
+        };
+
+        hmr_r: hmr_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51 65 66 35 36 52 67 47 61 62 63 64>;
+        };
+
+        hmr_p: hmr_p {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_P";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <15 16 1 4 5 3 2 17 18 19 33 32 31 30 29 47 48 50 49 51 65 66 35 36 52 67 47 61 62 63 64>;
+        };
+
+        hml_m: hml_m {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_M";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8 37 38 53 68 69 70 71 72 73 74>;
+        };
+
+        hml_i: hml_i {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_I";
+            #binding-cells = <2>;
+            tapping-term-ms = <210>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <350>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8 37 38 53 68 69 70 71 72 73 74>;
+        };
+
+        hml_p: hml_p {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_P";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <22 23 24 26 25 44 43 42 41 40 54 55 56 57 58 12 11 10 9 8 37 38 53 68 69 70 71 72 73 74>;
         };
     };
 
@@ -45,11 +129,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1            &kp N2    &kp N3               &kp N4               &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7                &kp N8                    &kp N9    &kp N0            &kp MINUS
-&kp TAB    &kp Q             &kp W     &kp F                &kp P                &kp B   &none                                                          &none      &kp J   &kp L                 &kp U                     &kp Y     &kp SEMICOLON     &kp BSLH
-&kp ESC    &hml RIGHT_ALT A  &kp R     &hml LEFT_SHIFT S    &hml LEFT_COMMAND T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr RIGHT_COMMAND N  &hmr RIGHT_SHIFT E        &kp I     &hmr RIGHT_ALT O  &kp SQT
-&kp LSHFT  &kp Z             &kp X     &hml LEFT_CONTROL C  &kp D                &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                 &hmr RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH          &kp RSHFT
-&mo 2      &kp GRAVE         &kp CAPS  &kp LEFT             &kp RIGHT                    &kp RETURN  &kp BACKSPACE  &mo 2         &mo 1      &kp TAB    &kp SPACE          &kp UP                &kp DOWN                  &kp LBKT  &kp RBKT          &mo 2
+&kp EQUAL  &kp N1              &kp N2    &kp N3                 &kp N4                 &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7                  &kp N8                      &kp N9    &kp N0              &kp MINUS
+&kp TAB    &kp Q               &kp W     &kp F                  &kp P                  &kp B   &none                                                          &none      &kp J   &kp L                   &kp U                       &kp Y     &kp SEMICOLON       &kp BSLH
+&kp ESC    &hml_i RIGHT_ALT A  &kp R     &hml_i LEFT_SHIFT S    &hml_i LEFT_COMMAND T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr_i RIGHT_COMMAND N  &hmr_i RIGHT_SHIFT E        &kp I     &hmr_i RIGHT_ALT O  &kp SQT
+&kp LSHFT  &kp Z               &kp X     &hml_i LEFT_CONTROL C  &kp D                  &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                   &hmr_i RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH            &kp RSHFT
+&mo 2      &kp GRAVE           &kp CAPS  &kp LEFT               &kp RIGHT                      &kp RETURN  &kp BACKSPACE  &mo 2         &mo 1      &kp TAB    &kp SPACE          &kp UP                  &kp DOWN                    &kp LBKT  &kp RBKT            &mo 2
             >;
         };
 
