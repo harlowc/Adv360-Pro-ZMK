@@ -129,11 +129,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7                  &kp N8                      &kp N9    &kp N0              &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp P      &kp B   &none                                                          &none      &kp J   &kp L                   &kp U                       &kp Y     &kp SEMICOLON       &kp BSLH
-&kp ESC    &none      &kp R     &none     &none      &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr_i RIGHT_COMMAND N  &hmr_i RIGHT_SHIFT E        &kp I     &hmr_i RIGHT_ALT O  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &none     &kp D      &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                   &hmr_i RIGHT_CONTROL COMMA  &kp DOT   &kp FSLH            &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp RETURN  &kp BACKSPACE  &mo 2         &mo 1      &kp TAB    &kp SPACE          &kp UP                  &kp DOWN                    &kp LBKT  &kp RBKT            &mo 2
+&kp EQUAL  &kp N1                 &kp N2             &kp N3             &kp N4               &kp N5  &tog 1                                                         &mo 3      &kp N6  &kp N7                &kp N8              &kp N9              &kp N0                  &kp MINUS
+&kp TAB    &kp Q                  &kp W              &kp F              &kp P                &kp B   &none                                                          &none      &kp J   &kp L                 &kp U               &kp Y               &kp SEMICOLON           &kp BSLH
+&kp ESC    &hml_p LEFT_CONTROL A  &hml_r LEFT_ALT R  &hml_m LEFT_GUI S  &hml_i LEFT_SHIFT T  &kp G   &none       &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp M   &hmr_i RIGHT_SHIFT N  &hmr_m RIGHT_GUI E  &hmr_i RIGHT_ALT I  &hmr_p RIGHT_CONTROL O  &kp SQT
+&kp LSHFT  &kp Z                  &kp X              &kp C              &kp D                &kp V                              &kp HOME      &kp PG_UP                        &kp K   &kp H                 &kp COMMA           &kp DOT             &kp FSLH                &kp RSHFT
+&mo 2      &kp GRAVE              &kp CAPS           &kp LEFT           &kp RIGHT                    &kp RETURN  &kp BACKSPACE  &mo 2         &mo 1      &kp TAB    &kp SPACE          &kp UP                &kp DOWN            &kp LBKT            &kp RBKT                &mo 2
             >;
         };
 
